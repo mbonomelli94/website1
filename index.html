@@ -59,12 +59,12 @@ function submitForm() {
     data[key] = value;
   }
 
-  fetch('https://example.com/api/endpoint', {
+  fetch('https://spl.zeotap.com/fp?region=EU&eventType=s2s', {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
+      'Authorization': `Basic base64(w_k:ff8a77cb-50e9-47ae-950e-2689effd1112)`
     }
   })
   .then(response => response.json())
